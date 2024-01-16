@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HapApp</title>
+    
+    <style>
+        *{
+            padding: 0;margin: 0;
+        }
+        .html,body{
+            height: 100%;
+            width: 100%;
+            background-color: black; 
+            color: white;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+        }
+        .navbar{
+            font-size: 25px;
+            height: 70px;
+            width: 100%;
+            color: white;
+            background-attachment: fixed;
+            display: flex;
+            justify-content:center;
+            flex-direction:column;
+            flex-wrap: wrap;
+            z-index: 1;
+            position: fixed;
+            background-color:black;
+            padding-left: 5vw;
+            gap: 10vw;
+            ;padding-top: 15px;
+        }
+        .heading{
+           
+            width: 50vw;
+        }
+        
+        .button{
+            width: 20vw;
+            float:left; 
+            padding-top: 5px;
+            border: none;
+        }
+        .first{
+            gap: 7vw;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .data{
+            padding-top: 200px;
+            width: 32%; 
+            padding-left: 20vw;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            
+        }
+        .image
+        {
+          padding-top:100px;
+        }
+        h1{
+            font-size: 80px;
+            font-weight:900;
+            line-height: 70px;
+            
+        }
+        input[type="button"]
+        {
+            border-radius: 20px;
+            font-size:20px ;
+            border: none;
+            color:black;
+            padding: 10px;
+            margin: 2px;
+            font-weight: 700;
+        }
+        input[type="button"]:hover
+        {
+            background-color: black;
+            color: white;
+            transition: 0.3s;
+        }
+        .img{
+            float: left;
+        }
+        h2{
+            font-size:52px;
+        }
+        .sec{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 10px;
+            text-align: center;
+        }  
+        p{
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px;
+        }  
+        .secphoto
+        {
+            padding: 50px;
+        }
+       img{
+            border: 10px solid rgb(0, 0, 0);
+            border-radius: 15px;
+            box-shadow: 0px 0px 8px 4px rgb(253, 251, 251);
+        }
+        img:hover{
+            background-color:blueviolet;
+            transition: 0.3s;
+  
+        }
+        .third{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+        .thirdphoto{
+            padding: 50px;
+        }
+        .fourth{
+            padding: 50px;
+            text-align: center;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .fourthphoto{
+            padding: 50px;
+        }
+        .fifth{
+            background-color: rgb(88, 34, 189);
+            text-align: center;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        } 
+        .fifthphoto
+        {padding: 50px;}
+        .sixth{
+            background-color: black;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+        .sixthphoto{
+            padding: 50px;
+        }
+        .seven
+        {
+            text-align: center;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .sevenphoto
+        {
+            padding: 50px;
+        }
+        .eight{
+           text-align: center;
+           font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .eightphoto{
+            padding: 50px;
+        }
+        .last
+        {
+            padding: 100px;
+            text-align: center;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgba(252, 239, 222, 0.897);
+            color: black;
+            height: 850px;
+        }
+        .options{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 50px;
+
+        }
+        .firsticon{
+            margin-left: 3vw;
+            width: 10vw;
+        }
+        .icon{
+            background-color:white;
+            padding: 20px;
+        }
+        .icon:hover{
+            background-color: black; 
+            padding: 20px;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+        .secondicon{
+            margin-right: 2vw;
+            text-align: center;
+            width: 10vw;
+        }
+        .thirdicon{
+            margin-right: 2vw;
+            text-align: center;
+            width: 10vw;
+        }
+        .fourthicon{
+           margin-right: 2vw;
+           text-align: center;
+           width: 10vw;
+        }
+        .fifthicon{
+           margin-right: 2vw;
+           text-align: center;
+           width: 10vw;
+        } 
+        .last1{
+            padding-top: 300px;
+        }
+        input[type="email"]
+        {
+            padding: 15px;
+            border-radius: 30px;
+            width: 45%;
+            height: 2.5vh;
+            border: 1px solid black;
+        }
+        .footer
+        {
+            color: #929595;
+        }
+        .name
+        {
+           float: left;
+        }
+        .insta
+        {
+           float: left; 
+        }
+        .privacy
+        {
+           float: left; 
+        }
+        .term
+        {
+           float: left;
+            padding-right:50px ;
+        }
+        .adress
+        {
+            float: left;
+        }
+        .buttoncontent {
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+        display: flex;
+
+}
+        .button {
+        border-radius: 40px; 
+        width: auto;
+        text-decoration: none; 
+        padding: 10px 20px;
+        font-size: 20px;
+        color:white;
+}
+@media (max-width: 600px) {
+  .navbar{
+    gap: 2vw;padding-left:2vw;
+  }
+.data{
+    padding-left: 0vw;
+  }
+    .data h1{
+font-size: 70px;
+font-weight: bolder;
+  }
+  h2{
+    font-size: 20px;
+  }
+}
+@media (max-width:1160px)
+{
+    .first{
+        gap: 10vw;
+    }
+    .data{
+        padding-left: 10vw;
+    }
+    .data h1{
+        font-size: 60px;
+    font-weight: bolder;
+   
+    }
+}
+@media(max-width:350px)
+{
+    .navbar{
+        gap: 0vw;
+    }
+    .navbar .heading img{
+        width: 50vw;
+}
+.navbar .button input[type="button"]{
+  font-size: 20px;
+    width: 40vw;
+    padding: 8px;      
+}
+.sec h2,p{
+    padding-left: 15vw;
+}
+}
+@media (max-width:1000px)
+{
+    h1{
+        font-size: 70px;
+    }
+    h2{
+        font-size: 40px;
+    }
+    .last1
+    {
+        padding-top: 200px;
+    }
+}
+@media (max-width:875px)
+{
+    .first{
+        gap: 15vw;
+    }
+    .first .data{
+        padding-left: 4vw;
+    }
+    .first .image img{
+        width: 350px;
+        height: 700px;
+    }
+    h2{
+        font-size: 35px;
+    }
+}  
+@media(max-width:1260px)
+{
+    .data .button{
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media(max-width:800px)
+{
+    .first{
+        gap: 10vw;
+    }
+    .last1{
+        padding-top:1.2vh ;
+    }
+}
+@media only screen and (max-width: 648px) {
+    .first .image img{
+        margin-left: 20vw;
+    }
+    .first .data p{
+        font-size: 25px;
+        padding: 20px;
+        width:17vw;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    h2{
+            font-size: 30px;
+        } 
+        .data h1{
+            font-size: 50px;
+        }
+}
+@media only screen and (max-width: 460px) {
+    .first .image img{
+        margin-left: 10vw;
+    }
+}
+@media only screen and (max-width:1275px){
+    .last1{
+        padding-top: 1px;
+    }
+}
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="heading">
+                <img class="iimage" src="images/logo.jpg" alt="Logo is not available"width="200vw" height="50px" style="border: none; border-radius:0px;box-shadow: none; "></div>
+            <div class="button">
+                <a href="#data"><input type="button" value="Get the app" style="cursor: pointer;"></a>
+            </div>
+        </div>
+        <div class="first">
+            <div class="data"id="data">
+            <strong><h1>MEET LOCALLY, EXPLORE GLOBALLY</h1></strong>
+            <P>Find creatives and like-minded people
+            nearby and around the world.</p>
+            <a href="#email"  class="button w-inline-block"><div class="buttoncontent"><img src="https://assets-global.website-files.com/652eb0ac972523c6c57b870e/652eb0ac972523c6c57b871b_apple.svg" loading="lazy" width="40" height="40" alt="This icon is not available" class="buttonicon" style="box-shadow: none;"><div class="buttontext"><div class="buttonsubheader">Get on</div><div class="buttonaction">App Store</div></div></div></a>
+            <a href="#email" class="button w-inline-block"><div class="buttoncontent">
+            <img src="https://assets-global.website-files.com/652eb0ac972523c6c57b870e/652eb0ac972523c6c57b8730_googleplay.svg" loading="lazy" width="40" height="40" alt="" class="buttonicon" style="box-shadow: none;"><div class="buttontext"><div class="buttonsubheader">Get on</div><div class="buttonaction">Google Play</div></div></div></a>
+        </div>
+         <div class="image">
+            <img src="images/Account.jpg" alt="This photo is currently not available" width="340vw" height="680vh" style="border: none;"></div>   </div>
+            <div class="sec">
+            <strong><h2>SEE WHO IS AROUND WITH THE REAL-TIME DISTANCE</h2></strong>
+            <p>From passionate enthusiasts to industry professionals, unlock local connections wherever you are.</p>
+            <div class="secphoto" id="Tickets">
+                <img src="images/My Tickets.jpg" alt="This photo is not available right now"width="300vw" height="600vh">
+            </div>
+           </div>
+           <div class="third">
+            <strong><h2>JOIN HUNDREDS OF LOCAL AND GLOBAL COMMUNITIES</h2></strong>
+            <p>From local groups to global circles, you'll never feel disconnected</p>
+            <div class="thirdphoto"> <img src="images/Event Details aamir.jpg" alt="This photo is not available right now" width="300vw" height="600vh"></div>
+                   </div>
+        <div class="fourth">
+            <strong><h2>CREATE COMMUNITY THAT INSPIRES TO MEET</h2></strong>
+        <p>Let your people see where other members are. Share media on community profile. Engage conversations and collaborations with community chat.</p>
+        <img src="images/6531548db6c0a18c644a29ea_community_chat-p-500.png" alt="This photo is not available" height="600vh" width="300vw">
+        </div>
+        <div class="fifth">
+            <strong style="font-size: 100px;"><h2>MEANINGFUL CONTACTS WITH AI-POWERED SUGGESTIONS</h2></strong>
+            <p>Go beyond random encounters. Get meaningful introductions powered by advanced AI, tailored to your interests and preferences.</p>
+            <div class="fifthphoto"><img src="images/Search result map - 3.jpg" alt="This photo is not available right now"width= "300vw" height="600vh"></div> 
+        </div>
+        <div class="sixth">
+            <strong><h2>ADD LINK AND PHOTO TO YOUR PROFILE</h2></strong>
+            <p>Share your work and interests. Let others discover the multidimensional you.</p>
+            <div class="sixthphoto"> <img src="images/Account.jpg" alt="This photo is not available Right now" width="300vw" height="600vh"></div>
+        </div>
+        <div class="seven">
+            <strong><h2>SEARCH WITH PURPOSE</h2></strong>
+            <p>Find people by interests, skills, and location. Dive deep into communities to find connections that matter.</p>
+            <div class="sevenphoto"> <img src="images/Searching - 7.jpg" alt="This Photo is not available right now"width="300vw" height="600vh"></div>
+        </div>
+        <div class="eight">
+            <strong><h2>SHARE THOUGHTS WITH FOLLOWERS AND PEOPLE AROUND</h2></strong>
+            <p>Ask, invite or just say "hi" with status messages.</p>
+            <img src="images/Categories - 3.jpg" alt="This Photo is not available right now" width="300vw" height="600vh">
+        </div>
+        <div class="last">
+            <strong><h2>LAST BUT NOT LEAST</h2></strong>
+            <div class="options">
+                <div class="firsticon">
+                     <div class="icon1">
+                     <img src="https://assets-global.website-files.com/652eb0ac972523c6c57b870e/652eb0ac972523c6c57b8716_battery-full.svg" loading="lazy" alt="Icon 1 is not available" class="icon"style="cursor: pointer;border: none; border-radius:15px;box-shadow: none;"></div>
+                    <p>It doesn't drain battery</p>
+                </div>
+                <div class="secondicon"> 
+                    <div class="icon1">
+                     <img src="https://assets-global.website-files.com/652eb0ac972523c6c57b870e/652eb0ac972523c6c57b871c_navigation.svg" loading="lazy" alt="Icon 2 is not available" class="icon"style="cursor: pointer;border: none; border-radius:15px;box-shadow: none;"></div>
+                    <p>Precise distance up to 1m</p>
+                </div>
+                <div class="thirdicon"> 
+                    <div class="icon1">
+                     <img src="https://assets-global.website-files.com/652eb0ac972523c6c57b870e/652eb0ac972523c6c57b8719_lock.svg" loading="lazy" alt="Icon 3 is not available" class="icon"style="cursor: pointer;border: none; border-radius:15px;box-shadow: none;"></div>
+                    <p>It doesn't track location</p>
+                </div>
+                <div class="fourthicon"> 
+                    <div class="icon1">
+                      <img src="https://assets-global.website-files.com/652eb0ac972523c6c57b870e/652eb0ac972523c6c57b8718_eye.svg" loading="lazy" alt="Icon 4 is not available" class="icon"style="cursor: pointer;border: none; border-radius:15px;box-shadow: none;"></div>
+                    <p>Go invisible with one tap</p>
+                </div>
+                <div class="fifthicon"> 
+                    <div class="icon1">
+                     <img src="https://assets-global.website-files.com/652eb0ac972523c6c57b870e/652eb0ac972523c6c57b8717_link.svg" loading="lazy" alt="Icon 5 is not available" class="icon"style="cursor: pointer;border: none; border-radius:15px;box-shadow: none;"></div>
+                    <p>Share profile via QR-code or weblink</p>
+                </div>
+                </div>
+                <div class="last1">
+                    <strong><h2>PRESENCE FOR ANDROID COMING SOON</h2></strong>
+                    <p>Leave your email to stay updated about release.</p>
+                    <input type="email" name="Email" id="email" placeholder="Email">
+                    <input type="button" value="Notify me"style="cursor: pointer;">
+                </div><br><br>
+                <br><br>
+                <div class="footer">
+                    <div class="name"><p>HapApp Social & Networking</p></div>
+                    <div class="insta"> <p>Instagram</p></div>
+                   <div class="privacy"><p>Privacy Policy</p></div>
+                    <div class="term"><p>Term of use</p></div>
+                    <div class="adress"><p>HapApp Social Technologies, Inc. <br>228 Park Ave S, Pmb 85451, <br>New York, <br> NY 10003 1 (800) 650-5580</p>
+                    </div>
+                </div>
+            </div>     
+        </div>       
+   
+</body>
+</html>
